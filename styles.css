@@ -1671,6 +1671,21 @@ p:last-child { margin-bottom: 0; }
   margin-top: 0.35rem;
 }
 
+.donate-submit:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.pay-error {
+  margin: 0.75rem 0 0;
+  padding: 0.7rem 0.85rem;
+  background: #fff1f0;
+  border: 1px solid #f5c2c0;
+  color: #a61b1b;
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
 .donate-thanks {
   text-align: left;
   padding: 0.5rem 0;

@@ -4,7 +4,10 @@ Desktop.ini
 *.log
 .env
 .env.*
+!.env.example
 .vscode/
 .idea/
 *.tmp
 *.temp
+__pycache__/
+*.pyc

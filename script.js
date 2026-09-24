@@ -306,7 +306,7 @@
     }
   };
 
-  form?.addEventListener("submit", (event) => {
+  form?.addEventListener("submit", async (event) => {
     event.preventDefault();
     const data = new FormData(form);
     const amount = Number(data.get("donateAmount"));
@@ -314,6 +314,13 @@
     const email = String(data.get("email") || "").trim();
     const phoneRaw = String(data.get("mpesaPhone") || "").replace(/\s+/g, "");
     const phoneOk = /^[17]\d{8}$/.test(phoneRaw);
+    const submitBtn = form.querySelector(".donate-submit");
+    const errorEl = document.querySelector("[data-pay-error]");
+
+    if (errorEl) {
+      errorEl.hidden = true;
+      errorEl.textContent = "";
+    }
 
     if (!name || !email) return;
 
@@ -328,15 +335,58 @@
     }
 
     const causeKey = String(data.get("cause") || "").trim();
-    addDonation(causeKey, amount);
-    renderGenerousBag({ causeKey, pulse: true });
+    const phone = phoneRaw.length === 9 ? `0${phoneRaw}` : phoneRaw;
 
-    form.hidden = true;
-    if (thanks) {
-      thanks.hidden = false;
-      const thanksCopy = thanks.querySelector("[data-thanks-copy]") || thanks.querySelector("p:not(.label)");
-      if (thanksCopy) {
-        thanksCopy.textContent = `STK push sent to +254${phoneRaw} for ${formatKsh(amount)}. Enter your M-Pesa PIN on your phone to complete the gift.`;
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending STK…";
+    }
+
+    try {
+      const response = await fetch("/api/payhero/stk", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          amount,
+          phone,
+          name,
+          email,
+          cause: causeKey,
+        }),
+      });
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok || !result.success) {
+        const message = result.message || "Could not start M-Pesa payment. Try again.";
+        if (errorEl) {
+          errorEl.hidden = false;
+          errorEl.textContent = message;
+        }
+        return;
+      }
+
+      addDonation(causeKey, amount);
+      renderGenerousBag({ causeKey, pulse: true });
+
+      form.hidden = true;
+      if (thanks) {
+        thanks.hidden = false;
+        const thanksCopy = thanks.querySelector("[data-thanks-copy]") || thanks.querySelector("p:not(.label)");
+        if (thanksCopy) {
+          const ref = result.reference ? ` Ref: ${result.reference}.` : "";
+          thanksCopy.textContent = `STK push sent to +254${phoneRaw} for ${formatKsh(amount)}. Enter your M-Pesa PIN on your phone.${ref}`;
+        }
+      }
+    } catch {
+      if (errorEl) {
+        errorEl.hidden = false;
+        errorEl.textContent = "Network error. Start the Kindred server with python server.py, then try again.";
+      }
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        syncAmountUi();
+        submitBtn.innerHTML = `Pay with M-Pesa · <span data-submit-amount>${formatKsh(amountInput?.value)}</span>`;
       }
     }
   });
