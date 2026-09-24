@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kindred — Clean water. Dignity. Belonging.</title>
+  <meta name="description" content="Kindred brings clean water and dignity to children who collect it from the mud. Give once. Change a morning." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="header-brand">
+      <a class="logo" href="#top" aria-label="Kindred home">
+        <span class="logo-mark" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="2.2" opacity="0.35"/>
+            <path d="M24.5 18.5c0 7.2-5.8 11.8-5.8 18.2a5.8 5.8 0 1 0 11.6 0c0-6.4-5.8-11-5.8-18.2z" fill="currentColor" opacity="0.95"/>
+            <path d="M39.5 18.5c0 7.2-5.8 11.8-5.8 18.2a5.8 5.8 0 1 0 11.6 0c0-6.4-5.8-11-5.8-18.2z" fill="currentColor" opacity="0.55"/>
+            <ellipse cx="32" cy="44.5" rx="11" ry="4.2" fill="currentColor" opacity="0.22"/>
+          </svg>
+        </span>
+        <span class="logo-word">Kindred</span>
+      </a>
+      <p class="label greeting header-greeting" data-greeting>
+        <span class="greeting-text" data-greeting-text></span><span class="greeting-caret" aria-hidden="true"></span>
+      </p>
+    </div>
+    <nav class="nav" aria-label="Primary">
+      <a href="#story">Story</a>
+      <a href="#voices">Voices</a>
+      <a href="#causes">Causes</a>
+      <a href="donate.html" class="nav-cta">Donate</a>
+    </nav>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle>
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-nav" data-mobile-nav hidden>
+    <a href="#story">Story</a>
+    <a href="#voices">Voices</a>
+    <a href="#causes">Causes</a>
+    <a href="donate.html">Donate</a>
+  </div>
+
+  <main id="main">
+    <section class="hero" id="top" data-hero-slider>
+      <div class="hero-slides" aria-hidden="true">
+        <img
+          class="hero-img is-active"
+          src="assets/hero.jpg"
+          alt="Children collecting unsafe muddy water near aid tents"
+          data-slide-img
+        />
+        <img
+          class="hero-img"
+          src="assets/hero-2.jpg"
+          alt="Children laughing with hope in a rural community"
+          data-slide-img
+        />
+      </div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="brand" data-reveal data-delay="0" aria-label="Kindred">
+          <span class="brand-letter" style="--i:0">K</span><span class="brand-letter" style="--i:1">i</span><span class="brand-letter" style="--i:2">n</span><span class="brand-letter" style="--i:3">d</span><span class="brand-letter" style="--i:4">r</span><span class="brand-letter" style="--i:5">e</span><span class="brand-letter" style="--i:6">d</span>
+        </p>
+        <div class="hero-copy" data-hero-copy>
+          <h1 data-reveal data-delay="1">They should not have to drink what the ground gives them.</h1>
+          <p class="lede type-line" data-reveal data-delay="2" data-type-line aria-live="polite">
+            <span data-type-text></span><span class="type-caret" aria-hidden="true"></span>
+          </p>
+        </div>
+        <div class="hero-actions" data-reveal data-delay="3">
+          <a class="btn" href="#causes">Choose a cause</a>
+          <a class="link-quiet" href="#story">Read one story</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="causes" id="causes" aria-labelledby="causes-heading">
+      <div class="causes-intro" data-reveal>
+        <p class="label">Choose what to support</p>
+        <h2 id="causes-heading">Pick a cause. We’ll take it from there.</h2>
+      </div>
+
+      <div class="cause-list">
+        <a class="cause" href="donate.html?cause=filters" data-reveal>
+          <div class="cause-media">
+            <img src="assets/cause-filter.jpg" alt="Children collecting muddy water into plastic jerrycans" />
+          </div>
+          <div class="cause-body">
+            <h3>Household filters</h3>
+            <p class="cause-gift">
+              <span class="cause-support" title="Support" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/>
+                </svg>
+              </span>
+              <span class="cause-donate-line">
+                <span data-cause-type data-type-word="Donate"></span><span class="cause-type-caret" aria-hidden="true"></span>
+              </span>
+            </p>
+            <div class="cause-fund" data-cause-fund="filters" data-goal="50000" data-base-raised="31000" style="--raised: 62">
+              <div class="cause-fund-meta">
+                <span><b data-raised-label>KSh 31,000</b> raised</span>
+                <span data-raised-pct>62%</span>
+              </div>
+              <div class="cause-progress-bar" role="presentation"><span></span></div>
+              <p class="cause-goal">Goal KSh 50,000</p>
+            </div>
+            <p class="cause-desc">Safe drinking water at home for a family relying on unsafe sources.</p>
+            <span class="cause-cta">Donate now</span>
+          </div>
+        </a>
+        <a class="cause" href="donate.html?cause=family" data-reveal data-delay="1">
+          <div class="cause-media">
+            <img src="assets/cause-family.jpg" alt="Children smiling despite worn clothes, looking up with hope" />
+          </div>
+          <div class="cause-body">
+            <h3>Family water kit</h3>
+            <p class="cause-gift">
+              <span class="cause-support" title="Support" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/>
+                </svg>
+              </span>
+              <span class="cause-donate-line">
+                <span data-cause-type data-type-word="Donate"></span><span class="cause-type-caret" aria-hidden="true"></span>
+              </span>
+            </p>
+            <div class="cause-fund" data-cause-fund="family" data-goal="125000" data-base-raised="55000" style="--raised: 44">
+              <div class="cause-fund-meta">
+                <span><b data-raised-label>KSh 55,000</b> raised</span>
+                <span data-raised-pct>44%</span>
+              </div>
+              <div class="cause-progress-bar" role="presentation"><span></span></div>
+              <p class="cause-goal">Goal KSh 125,000</p>
+            </div>
+            <p class="cause-desc">Clean water supplies and follow-up care for one household.</p>
+            <span class="cause-cta">Donate now</span>
+          </div>
+        </a>
+        <a class="cause" href="donate.html?cause=well" data-reveal data-delay="2">
+          <div class="cause-media">
+            <img src="assets/cause-well.jpg" alt="Volunteers handing out water and aid supplies" />
+          </div>
+          <div class="cause-body">
+            <h3>Community well share</h3>
+            <p class="cause-gift">
+              <span class="cause-support" title="Support" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/>
+                </svg>
+              </span>
+              <span class="cause-donate-line">
+                <span data-cause-type data-type-word="Donate"></span><span class="cause-type-caret" aria-hidden="true"></span>
+              </span>
+            </p>
+            <div class="cause-fund" data-cause-fund="well" data-goal="500000" data-base-raised="390000" style="--raised: 78">
+              <div class="cause-fund-meta">
+                <span><b data-raised-label>KSh 390,000</b> raised</span>
+                <span data-raised-pct>78%</span>
+              </div>
+              <div class="cause-progress-bar" role="presentation"><span></span></div>
+              <p class="cause-goal">Goal KSh 500,000</p>
+            </div>
+            <p class="cause-desc">Help fund a shared well that serves an entire village.</p>
+            <span class="cause-cta">Donate now</span>
+          </div>
+        </a>
+        <a class="cause" href="donate.html?cause=learning" data-reveal data-delay="3">
+          <div class="cause-media">
+            <img src="assets/cause-learn.jpg" alt="Teacher helping a young girl read at a worn classroom desk" />
+          </div>
+          <div class="cause-body">
+            <h3>Learning &amp; books</h3>
+            <p class="cause-gift">
+              <span class="cause-support" title="Support" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/>
+                </svg>
+              </span>
+              <span class="cause-donate-line">
+                <span data-cause-type data-type-word="Donate"></span><span class="cause-type-caret" aria-hidden="true"></span>
+              </span>
+            </p>
+            <div class="cause-fund" data-cause-fund="learning" data-goal="80000" data-base-raised="28000" style="--raised: 35">
+              <div class="cause-fund-meta">
+                <span><b data-raised-label>KSh 28,000</b> raised</span>
+                <span data-raised-pct>35%</span>
+              </div>
+              <div class="cause-progress-bar" role="presentation"><span></span></div>
+              <p class="cause-goal">Goal KSh 80,000</p>
+            </div>
+            <p class="cause-desc">School materials so children can learn when water no longer keeps them home.</p>
+            <span class="cause-cta">Donate now</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="story" id="story" data-story-slider>
+      <div class="story-shell">
+        <div class="story-visual" data-reveal>
+          <div class="story-slides" aria-hidden="true">
+            <img class="story-img is-active" src="assets/story-2.jpg" alt="" data-story-img />
+            <img class="story-img" src="assets/hero-2.jpg" alt="" data-story-img />
+            <img class="story-img" src="assets/cause-learn.jpg" alt="" data-story-img />
+            <img class="story-img" src="assets/cause-family.jpg" alt="" data-story-img />
+            <img class="story-img" src="assets/hero.jpg" alt="" data-story-img />
+          </div>
+          <div class="story-caption">
+            <span class="story-visual-tag" data-story-tag>Hope, up close</span>
+            <span class="story-visual-note" data-story-note>Joy returns when water is safe.</span>
+          </div>
+        </div>
+
+        <div class="story-copy" data-reveal data-delay="1" data-story-copy>
+          <p class="story-kicker" data-story-kicker>Why it matters</p>
+          <h2 class="story-title">
+            <span data-story-title-main>Every child deserves</span>
+            <em data-story-title-em>a day that looks like this.</em>
+          </h2>
+          <p class="story-lead" data-story-lead>
+            Clean water is more than a drink. It means fewer sick days, more time in school, and room for play — the ordinary joys childhood should hold.
+          </p>
+          <p class="story-body" data-story-body>
+            Your gift helps Kindred fund wells, filters, and local care so communities can thrive. Safe water today. Stronger tomorrows.
+          </p>
+          <a class="story-link" href="#causes">Support a cause <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="voices" id="voices" aria-labelledby="voices-heading" data-voices>
+      <div class="voices-intro" data-reveal>
+        <p class="label">Community</p>
+        <div class="voices-intro-row">
+          <h2 id="voices-heading">Words from people who’ve seen the change</h2>
+          <p>Families, teachers, and neighbours share what clean water means day to day.</p>
+        </div>
+      </div>
+
+      <div class="voices-grid">
+        <article class="voice" data-reveal>
+          <img src="assets/voice-1.jpg" alt="Two children laughing outdoors" />
+          <blockquote>
+            <p>“The filter arrived last week. My little brother stopped missing school from stomach sickness. Clean water at home changed our mornings.”</p>
+            <footer>
+              <cite>Amina K.</cite>
+              <span>Parent · Kilifi</span>
+            </footer>
+          </blockquote>
+        </article>
+
+        <article class="voice" data-reveal data-delay="1">
+          <img src="assets/voice-2.jpg" alt="Boy carrying a yellow water jerrycan on his head" />
+          <blockquote>
+            <p>“I walked kilometres for muddy water as a child. Today our village well means my daughter won’t. That is the gift I prayed for.”</p>
+            <footer>
+              <cite>James O.</cite>
+              <span>Father · Makueni</span>
+            </footer>
+          </blockquote>
+        </article>
+
+        <article class="voice" data-reveal data-delay="2">
+          <img src="assets/voice-6.jpg" alt="Child reading with a teacher in class" />
+          <blockquote>
+            <p>“Teachers say attendance is up since the water point opened near school. Children arrive ready to learn, not exhausted from fetching.”</p>
+            <footer>
+              <cite>Mary Wanjiku</cite>
+              <span>Teacher · Kitui</span>
+            </footer>
+          </blockquote>
+        </article>
+
+        <article class="voice voice-wide" data-reveal>
+          <img src="assets/voice-5.jpg" alt="Volunteers handing out water and aid" />
+          <blockquote>
+            <p>“Our street pooled M-Pesa gifts for family water kits. Three households woke up differently the next week. Kindred made it simple.”</p>
+            <footer>
+              <cite>Daniel K.</cite>
+              <span>Neighbour · Nakuru</span>
+            </footer>
+          </blockquote>
+        </article>
+
+        <article class="voice" data-reveal data-delay="1">
+          <img src="assets/voice-3.jpg" alt="Children collecting water near a puddle" />
+          <blockquote>
+            <p>“Not a campaign moment — just kids being kids after the tap was fixed. That ordinary joy is what your gifts buy.”</p>
+            <footer>
+              <cite>Lila N.</cite>
+              <span>Volunteer · Nairobi</span>
+            </footer>
+          </blockquote>
+        </article>
+
+        <article class="voice" data-reveal data-delay="2">
+          <img src="assets/voice-4.jpg" alt="Hands pouring water into a container" />
+          <blockquote>
+            <p>“I gave what I could this morning. Watching the raised totals move hit differently. A small gift. Real water.”</p>
+            <footer>
+              <cite>Sara Kimani</cite>
+              <span>Donor · Mombasa</span>
+            </footer>
+          </blockquote>
+        </article>
+      </div>
+    </section>
+
+    <section class="path">
+      <h2 data-reveal>How your gift moves</h2>
+      <ol>
+        <li data-reveal data-delay="0"><span>1</span><div><strong>You give</strong><p>Funds reach verified water projects — wells, filters, repairs.</p></div></li>
+        <li data-reveal data-delay="1"><span>2</span><div><strong>Water arrives</strong><p>Local partners install and maintain what communities can own.</p></div></li>
+        <li data-reveal data-delay="2"><span>3</span><div><strong>A child drinks safe</strong><p>Less disease. More school. A cup that does not cost a future.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="vow" data-reveal>
+      <h2>We do not ask children to be grateful for surviving. We ask the rest of us to make dirty water unnecessary.</h2>
+      <a class="btn" href="#causes">Donate</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <strong class="footer-brand">
+      <span class="logo-mark" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+          <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="2.2" opacity="0.35"/>
+          <path d="M24.5 18.5c0 7.2-5.8 11.8-5.8 18.2a5.8 5.8 0 1 0 11.6 0c0-6.4-5.8-11-5.8-18.2z" fill="currentColor" opacity="0.95"/>
+          <path d="M39.5 18.5c0 7.2-5.8 11.8-5.8 18.2a5.8 5.8 0 1 0 11.6 0c0-6.4-5.8-11-5.8-18.2z" fill="currentColor" opacity="0.55"/>
+          <ellipse cx="32" cy="44.5" rx="11" ry="4.2" fill="currentColor" opacity="0.22"/>
+        </svg>
+      </span>
+      Kindred
+    </strong>
+    <span>Clean water. Dignity. Belonging.</span>
+    <span>© <span data-year></span></span>
+  </footer>
+
+  <a class="donate-float" href="donate.html" aria-label="Donate — thanks for your support">
+    <img src="assets/donate-badge.jpg" alt="" width="120" height="120" />
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate — Kindred</title>
+  <meta name="description" content="Donate to Kindred. Your gift funds clean water, dignity, and belonging for children who need it most." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-donate">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header is-scrolled" data-header>
+    <a class="logo" href="index.html" aria-label="Kindred home">
+      <span class="logo-mark" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+          <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="2.2" opacity="0.35"/>
+          <path d="M24.5 18.5c0 7.2-5.8 11.8-5.8 18.2a5.8 5.8 0 1 0 11.6 0c0-6.4-5.8-11-5.8-18.2z" fill="currentColor" opacity="0.95"/>
+          <path d="M39.5 18.5c0 7.2-5.8 11.8-5.8 18.2a5.8 5.8 0 1 0 11.6 0c0-6.4-5.8-11-5.8-18.2z" fill="currentColor" opacity="0.55"/>
+          <ellipse cx="32" cy="44.5" rx="11" ry="4.2" fill="currentColor" opacity="0.22"/>
+        </svg>
+      </span>
+      <span class="logo-word">Kindred</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="index.html#causes">Causes</a>
+      <a href="donate.html" class="nav-cta" aria-current="page">Donate</a>
+    </nav>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle>
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-nav" data-mobile-nav hidden>
+    <a href="index.html">Home</a>
+    <a href="index.html#causes">Causes</a>
+    <a href="donate.html">Donate</a>
+  </div>
+
+  <div class="generous-bag" data-generous-bag>
+    <div class="generous-bag-inner">
+      <span class="generous-bag-icon" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 18c0-5.5 4-9.5 10-9.5S42 12.5 42 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M18.5 22.5h27l4.5 28.5H14L18.5 22.5z" fill="currentColor" opacity="0.18"/>
+          <path d="M18.5 22.5h27l4.5 28.5H14L18.5 22.5z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M25 22.5c1.8 3.2 4.2 4.8 7 4.8s5.2-1.6 7-4.8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="32" cy="38" r="7.5" fill="currentColor" opacity="0.22"/>
+          <text x="32" y="42" text-anchor="middle" font-size="11" font-weight="700" fill="currentColor" font-family="system-ui,sans-serif">KSh</text>
+        </svg>
+      </span>
+      <div class="generous-bag-copy">
+        <p class="generous-bag-label">Generous bag</p>
+        <p class="generous-bag-amount"><strong data-contributed-amount>KSh 0</strong> already contributed</p>
+        <p class="generous-bag-meta" data-contributed-meta>Across all Kindred causes</p>
+      </div>
+    </div>
+  </div>
+
+  <main id="main" class="pay-shell">
+    <a class="pay-back" href="index.html#causes">← Back to causes</a>
+
+    <section class="pay-panel" id="donate">
+      <header class="pay-head">
+        <p class="label">M-Pesa payment</p>
+        <h1 data-donate-title>Donate with M-Pesa</h1>
+        <p class="pay-lede" data-donate-lede>Pay in Kenyan Shillings. You’ll get an STK push on your phone to confirm.</p>
+      </header>
+
+      <div class="pay-summary">
+        <div class="pay-summary-row">
+          <span>Cause</span>
+          <strong data-donate-selected>General gift</strong>
+        </div>
+        <div class="pay-summary-row">
+          <span>Method</span>
+          <strong class="pay-method">M-Pesa · KSh</strong>
+        </div>
+        <div class="pay-summary-row pay-summary-total">
+          <span>Total due</span>
+          <strong data-pay-total>KSh —</strong>
+        </div>
+      </div>
+
+      <form class="give-form donate-form" data-give-form novalidate>
+        <input type="hidden" name="cause" value="" data-cause-input />
+        <input type="hidden" name="method" value="mpesa" />
+
+        <div class="amount-edit">
+          <label class="amount-edit-label" for="donate-amount">Amount (KSh)</label>
+          <div class="amount-edit-field">
+            <span class="amount-prefix">KSh</span>
+            <input
+              id="donate-amount"
+              type="number"
+              name="donateAmount"
+              data-donate-amount
+              min="100"
+              step="50"
+              value=""
+              required
+              inputmode="numeric"
+              placeholder="Enter any amount"
+              aria-describedby="amount-hint"
+            />
+          </div>
+          <p class="amount-hint" id="amount-hint">Give what you can — minimum KSh 100 via M-Pesa.</p>
+        </div>
+
+        <div class="pay-section">
+          <h2 class="pay-section-title">Your details</h2>
+          <div class="donate-fields">
+            <label class="field">Full name <input type="text" name="name" required autocomplete="name" placeholder="Your name" /></label>
+            <label class="field">Email <em>(receipt)</em>
+              <input type="email" name="email" required autocomplete="email" placeholder="you@email.com" />
+            </label>
+          </div>
+        </div>
+
+        <div class="pay-section">
+          <h2 class="pay-section-title">M-Pesa number</h2>
+          <div class="donate-fields">
+            <label class="field" for="mpesa-phone">Phone number
+              <div class="mpesa-phone-field">
+                <span class="mpesa-prefix" aria-hidden="true">+254</span>
+                <input
+                  id="mpesa-phone"
+                  type="tel"
+                  name="mpesaPhone"
+                  data-mpesa-phone
+                  required
+                  inputmode="numeric"
+                  autocomplete="tel-national"
+                  placeholder="7XX XXX XXX"
+                  maxlength="12"
+                  pattern="[17][0-9\s]{8,11}"
+                  aria-describedby="mpesa-hint"
+                />
+              </div>
+            </label>
+            <p class="amount-hint" id="mpesa-hint">Use the Safaricom number registered to your M-Pesa account.</p>
+          </div>
+
+          <div class="mpesa-steps">
+            <p><strong>How it works</strong></p>
+            <ol>
+              <li>Enter your amount in KSh and M-Pesa number.</li>
+              <li>Tap <em>Pay with M-Pesa</em> — we’ll send an STK push.</li>
+              <li>Enter your M-Pesa PIN on your phone to finish.</li>
+            </ol>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-block donate-submit">
+          Pay with M-Pesa · <span data-submit-amount>KSh —</span>
+        </button>
+        <p class="note">Demo checkout — no real M-Pesa charge is made.</p>
+      </form>
+
+      <div class="give-thanks donate-thanks" data-thanks hidden>
+        <p class="label">M-Pesa request sent</p>
+        <h3>Check your phone.</h3>
+        <p data-thanks-copy>Enter your M-Pesa PIN when the prompt appears. Your KSh gift will support clean water.</p>
+        <button type="button" class="btn" data-thanks-close>Make another gift</button>
+        <p class="note"><a class="link-quiet" href="index.html">← Back to home</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <strong class="footer-brand">
+      <span class="logo-mark" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+          <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="2.2" opacity="0.35"/>
+          <path d="M24.5 18.5c0 7.2-5.8 11.8-5.8 18.2a5.8 5.8 0 1 0 11.6 0c0-6.4-5.8-11-5.8-18.2z" fill="currentColor" opacity="0.95"/>
+          <path d="M39.5 18.5c0 7.2-5.8 11.8-5.8 18.2a5.8 5.8 0 1 0 11.6 0c0-6.4-5.8-11-5.8-18.2z" fill="currentColor" opacity="0.55"/>
+          <ellipse cx="32" cy="44.5" rx="11" ry="4.2" fill="currentColor" opacity="0.22"/>
+        </svg>
+      </span>
+      Kindred
+    </strong>
+    <span>Clean water. Dignity. Belonging.</span>
+    <span>© <span data-year></span></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
